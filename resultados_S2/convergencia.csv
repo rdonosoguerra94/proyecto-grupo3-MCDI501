@@ -1,0 +1,9 @@
+modelo,k,media,prob
+Binomial iid,100,6.37,0.11
+Binomial iid,1000,6.669,0.111
+Binomial iid,5000,6.6998,0.1114
+Binomial iid,10000,6.6959,0.1124
+Markov primer orden,100,7.08,0.19
+Markov primer orden,1000,6.61,0.175
+Markov primer orden,5000,6.6314,0.1746
+Markov primer orden,10000,6.601,0.1739

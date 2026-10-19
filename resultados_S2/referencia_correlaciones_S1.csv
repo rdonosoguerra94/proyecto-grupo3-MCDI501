@@ -1,0 +1,5 @@
+variable,n,r_S1
+TemperaturaMáxima / Temperatura3pm,141589,0.9845028310904481
+Presión9am / Presión3pm,130171,0.961325721117448
+HorasSol / Nubosidad3pm,65253,-0.7039296337088615
+Humedad3pm / HorasSol,74497,-0.6291303599834128

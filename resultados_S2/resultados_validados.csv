@@ -1,0 +1,20 @@
+tipo,variable,estimacion,IC_inf,IC_sup,metodo,diagnostico,recomendacion,ratio_ancho_grupos_iid,cambio_recorte
+parametro,TemperaturaMáxima,23.22134827564685,23.18494334651372,23.258405135140165,BCa iid,Incertidumbre sensible a grupos,Conservar estimación; validar dependencia y cobertura antes de generalizar,4.822283120053958,-0.003931404357476964
+parametro,Humedad3pm,51.5391158755046,51.427560742046055,51.64683138394806,BCa iid,Incertidumbre sensible a grupos,Conservar estimación; validar dependencia y cobertura antes de generalizar,3.743007542725663,-0.021325308305847557
+parametro,Presión3pm,1015.2558888309616,1015.2179394048903,1015.2944324519923,BCa iid,Incertidumbre sensible a grupos,Conservar estimación; validar dependencia y cobertura antes de generalizar,3.176176016048008,0.02118505187718256
+parametro,LluviaMañana_bin,0.22418121848473554,0.22203378137170887,0.22635432123944216,BCa iid,Incertidumbre sensible a grupos,Conservar estimación; validar dependencia y cobertura antes de generalizar,1.9584038666806145,0.0
+correlacion,TemperaturaMáxima / Temperatura3pm,0.9845028310904431,0.9841400920615699,0.9848537683789657,Percentil iid pareado,Signo y precisión estables bajo iid,Evaluar por localidad y estación; evitar redundancia de predictores,,-0.0018840188163442573
+correlacion,Presión9am / Presión3pm,0.9613257211174477,0.9608529812053058,0.9618068877418946,Percentil iid pareado,Signo y precisión estables bajo iid,Evaluar por localidad y estación; evitar redundancia de predictores,,-0.005064435988100913
+correlacion,HorasSol / Nubosidad3pm,-0.7039296337088642,-0.7077003830865106,-0.7001595240175814,Percentil iid pareado,Signo y precisión estables bajo iid,Evaluar por localidad y estación; evitar redundancia de predictores,,0.0017798149184145018
+correlacion,Humedad3pm / HorasSol,-0.6291303599834127,-0.6335918443628461,-0.6244976373932621,Percentil iid pareado,Signo y precisión estables bajo iid,Evaluar por localidad y estación; evitar redundancia de predictores,,0.014272342030539065
+hipotesis,Humedad3pm según lluvia mañana,182.60769329824922,,,Permutación Welch,p permutación=9.999e-05; p paramétrico <0.001; posible subdesbordamiento,Concordancia no resuelve falta de intercambiabilidad temporal/espacial,,
+sensibilidad_hipotesis,Original,22.28939435126226,,,Welch tras perturbación,d=1.198; cambio=0.000 pp,Conservar magnitud y revisar dependencia; no seleccionar limpieza por valor p,,
+sensibilidad_hipotesis,Sin duplicados originales,22.28939435126226,,,Welch tras perturbación,d=1.198; cambio=0.000 pp,Conservar magnitud y revisar dependencia; no seleccionar limpieza por valor p,,
+sensibilidad_hipotesis,Humedad P1–P99,21.181094390317107,,,Welch tras perturbación,d=1.170; cambio=-1.108 pp,Conservar magnitud y revisar dependencia; no seleccionar limpieza por valor p,,
+sensibilidad_hipotesis,Humedad P5–P95,15.545680301752988,,,Welch tras perturbación,d=0.966; cambio=-6.744 pp,Conservar magnitud y revisar dependencia; no seleccionar limpieza por valor p,,
+simulacion,Binomial iid,6.6959,,,Monte Carlo 30 días,P99=12.0 días; P(>=10)=0.1124,Escenario hipotético; validar temporalmente antes de decisión operativa,,
+simulacion,Markov primer orden,6.601,,,Monte Carlo 30 días,P99=14.0 días; P(>=10)=0.1739,Escenario hipotético; validar temporalmente antes de decisión operativa,,
+sensibilidad_horizonte,7 días,0.22307142857142853,,,Binomial iid,SD proporción=0.15872; P99=0.5714,Comparación matemática bajo p constante; no extrapolar a calendario agrícola,,
+sensibilidad_horizonte,30 días,0.22319666666666668,,,Binomial iid,SD proporción=0.07583; P99=0.4000,Comparación matemática bajo p constante; no extrapolar a calendario agrícola,,
+sensibilidad_horizonte,90 días,0.22355,,,Binomial iid,SD proporción=0.04426; P99=0.3333,Comparación matemática bajo p constante; no extrapolar a calendario agrícola,,
+sensibilidad_horizonte,365 días,0.22436383561643833,,,Binomial iid,SD proporción=0.02172; P99=0.2767,Comparación matemática bajo p constante; no extrapolar a calendario agrícola,,
